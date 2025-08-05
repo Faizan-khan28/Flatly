@@ -4,7 +4,7 @@ function PrivacyPolicy() {
         <div className="max-w-4xl mx-auto bg-white p-10 shadow-xl rounded-xl">
           <h1 className="text-5xl font-extrabold text-gray-800 mb-6 text-center">Privacy Policy</h1>
           <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-            At Hariom PG, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you use our services.
+            At Flatly, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you use our services.
           </p>
           <div className="space-y-8">
             <section>
@@ -48,8 +48,8 @@ function PrivacyPolicy() {
               href="mailto:info@hariompg.com"
               className="text-blue-600 font-medium underline hover:text-blue-800"
             >
-              hariompgandguesthouse@gmail.com
-            </a>.
+              flatly7555@gmail.com
+            </a>
           </p>
         </div>
       </div>

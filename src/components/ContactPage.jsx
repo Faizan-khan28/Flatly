@@ -11,21 +11,16 @@ const ContactPage = () => {
 
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState('');
-  const [requestId, setRequestId] = useState(''); // Store requestId for OTP verification
-  const [otp, setOtp] = useState(''); // Store OTP entered by the user
-  const [isOtpSent, setIsOtpSent] = useState(false); // Flag to show OTP input after sending enquiry
+  const [requestId, setRequestId] = useState('');
+  const [otp, setOtp] = useState('');
+  const [isOtpSent, setIsOtpSent] = useState(false);
 
-  // Update form data on input change
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    // Handle phone input
     if (name === 'phone') {
-      // If user tries to input anything other than the initial country code, reset the phone input
       if (value.length < 4 || !value.startsWith('+91 ')) {
-        setFormData({ ...formData, phone: '+91 ' }); // Reset to country code
+        setFormData({ ...formData, phone: '+91 ' });
       } else {
-        // Update the phone number with the current value
         setFormData({ ...formData, phone: value });
       }
     } else {
@@ -33,18 +28,14 @@ const ContactPage = () => {
     }
   };
 
-  // Update OTP input on change
   const handleOtpChange = (e) => {
     setOtp(e.target.value);
   };
 
-  // Handle form submission - send enquiry and OTP
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(null); // Reset error state
-    setSuccessMessage(''); // Reset success message
-
-    console.log(formData);
+    setError(null);
+    setSuccessMessage('');
 
     try {
       const response = await fetch('https://backend-qlic.onrender.com/api/user/SubmitEnquiry', {
@@ -55,16 +46,13 @@ const ContactPage = () => {
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to send enquiry');
-      }
+      if (!response.ok) throw new Error('Failed to send enquiry');
 
       const data = await response.json();
-      console.log(data);
 
       if (data.requestId) {
-        setRequestId(data.requestId); // Save requestId for OTP verification
-        setIsOtpSent(true); // Show OTP input field
+        setRequestId(data.requestId);
+        setIsOtpSent(true);
         alert('OTP sent successfully! Please enter the OTP.');
       }
     } catch (error) {
@@ -72,7 +60,6 @@ const ContactPage = () => {
     }
   };
 
-  // Handle OTP verification and saving the enquiry
   const handleOtpSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -84,31 +71,27 @@ const ContactPage = () => {
         body: JSON.stringify({ requestId, otp, ...formData }),
       });
 
-      if (!response.ok) {
-        throw new Error('OTP verification failed');
-      }
+      if (!response.ok) throw new Error('OTP verification failed');
 
       const data = await response.json();
       setSuccessMessage('Enquiry saved successfully after OTP verification!');
       alert('Thank you for your message. Your enquiry has been saved successfully.');
 
-      // Reset form and state
       setFormData({
         fullName: '',
-        phone: '+91 ', // Reset with country code
+        phone: '+91 ',
         propertyType: '',
         roomOrBhkType: '',
         message: '',
       });
       setOtp('');
       setRequestId('');
-      setIsOtpSent(false); // Hide OTP input after successful verification
+      setIsOtpSent(false);
     } catch (error) {
       setError('There was an error verifying the OTP.');
     }
   };
 
-  // Dynamically render BHK/Room options based on selected property type
   const renderRoomOrBhkOptions = () => {
     switch (formData.propertyType) {
       case 'flats':
@@ -150,25 +133,23 @@ const ContactPage = () => {
           </div>
         );
       default:
-        return null; // No additional fields for "Land"
+        return null;
     }
   };
 
   return (
     <div className="bg-gray-50 min-h-screen mt-12">
-      {/* Header Section */}
       <header className="bg-indigo-600 text-white py-8">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-bold">Get in Touch with HariomSpaces</h1>
+          <h1 className="text-4xl font-bold">Get in Touch with Flatly</h1>
           <p className="text-lg mt-2">We're here to assist you. Feel free to reach out!</p>
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 
-          {/* Contact Information */}
+          {/* Contact Info */}
           <div className="bg-white shadow-md rounded-lg p-8">
             <h2 className="text-3xl font-semibold mb-6">Contact Information</h2>
             <p className="text-lg mb-6 text-gray-600">
@@ -179,14 +160,14 @@ const ContactPage = () => {
                 <span className="bg-indigo-600 text-white p-3 rounded-full mr-4">📍</span>
                 <div>
                   <h3 className="text-xl font-medium">Our Address</h3>
-                  <p className="text-gray-600">Hariom PG, Sector 141, Shadara gali no 35, Noida</p>
+                  <p className="text-gray-600">Flatly Office, Sector 99, Tech Street, Noida</p>
                 </div>
               </li>
               <li className="flex items-start">
                 <span className="bg-indigo-600 text-white p-3 rounded-full mr-4">📞</span>
                 <div>
                   <h3 className="text-xl font-medium">Phone Number</h3>
-                  <p className="text-gray-600">+91 93108 21158</p>
+                  <p className="text-gray-600">+91 98765 43210</p>
                 </div>
               </li>
               <li className="flex items-start">
@@ -267,7 +248,6 @@ const ContactPage = () => {
                 <button type="submit" className="bg-indigo-600 text-white px-4 py-2 rounded-lg">Send Message</button>
               </form>
             ) : (
-              // OTP input field
               <form className="space-y-6" onSubmit={handleOtpSubmit}>
                 <div>
                   <label className="block text-lg font-medium mb-2" htmlFor="otp">Enter OTP</label>

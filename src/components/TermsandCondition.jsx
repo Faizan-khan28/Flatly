@@ -4,13 +4,13 @@ function TermsAndConditions() {
         <div className="max-w-4xl mx-auto bg-white p-10 shadow-2xl rounded-xl">
           <h1 className="text-5xl font-extrabold text-gray-800 mb-6 text-center">Terms & Conditions</h1>
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            Welcome to Hariom PG. By accessing or using our services, you agree to be bound by these terms and conditions.
+            Welcome to Flatly. By accessing or using our services, you agree to be bound by these terms and conditions.
           </p>
           <div className="space-y-8">
             <section>
               <h2 className="text-3xl font-semibold text-gray-800 mb-4">1. Acceptance of Terms</h2>
               <p className="text-gray-700 text-lg leading-relaxed">
-                By using Hariom PG's website or services, you agree to comply with and be bound by these terms. If you disagree with any part, please do not use our services.
+                By using Flatly's website or services, you agree to comply with and be bound by these terms. If you disagree with any part, please do not use our services.
               </p>
             </section>
   
@@ -24,7 +24,7 @@ function TermsAndConditions() {
             <section>
               <h2 className="text-3xl font-semibold text-gray-800 mb-4">3. Limitation of Liability</h2>
               <p className="text-gray-700 text-lg leading-relaxed">
-                Hariom PG is not liable for any damages or losses resulting from your use of our services. We make no guarantees regarding the availability or performance of our services.
+                Flatly is not liable for any damages or losses resulting from your use of our services. We make no guarantees regarding the availability or performance of our services.
               </p>
             </section>
   
@@ -48,7 +48,7 @@ function TermsAndConditions() {
               href="mailto:info@hariompg.com"
               className="text-blue-600 font-medium underline hover:text-blue-800"
             >
-              hariompgandguesthouse@gmail.com
+             flatly7555@gmail.com
             </a>.
           </p>
         </div>

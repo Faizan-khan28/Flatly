@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
-import { BsChatDotsFill } from 'react-icons/bs'; // Chat icon
-import { IoMdClose } from 'react-icons/io'; // Close icon
-import { FiArrowLeft } from 'react-icons/fi'; // Back icon
+import { BsChatDotsFill } from 'react-icons/bs';
+import { IoMdClose } from 'react-icons/io';
+import { FiArrowLeft } from 'react-icons/fi';
 
 const FloatingChatbot = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [step, setStep] = useState(1); // 1 - Language selection, 2 - Property selection, etc.
+    const [step, setStep] = useState(1);
     const [language, setLanguage] = useState('');
     const [property, setProperty] = useState('');
     const [specificOption, setSpecificOption] = useState('');
     const [phone, setPhone] = useState('');
     const [messages, setMessages] = useState([]);
-    const [previousMessage, setPreviousMessage] = useState(''); // Store previous message for back navigation
+    const [previousMessage, setPreviousMessage] = useState('');
 
     const toggleChatbot = () => setIsOpen(!isOpen);
 
     const addMessage = (text, sender = 'bot') => {
-        setMessages([{ text, sender }]); // Reset messages to show only the latest one
+        setMessages([{ text, sender }]);
     };
 
     const handleLanguageSelection = (lang) => {
@@ -41,7 +41,7 @@ const FloatingChatbot = () => {
 
     const handleSpecificOptionSelection = (option) => {
         setSpecificOption(option);
-        setStep(5); // Move to phone input
+        setStep(5);
         setPreviousMessage('Please enter your phone number so I can get in touch with you. 📞');
         const phoneMessage = language === 'English'
             ? 'Please enter your phone number so I can get in touch with you. 📞'
@@ -67,7 +67,6 @@ const FloatingChatbot = () => {
                     },
                     body: JSON.stringify(inquiry),
                 });
-                console.log(response);
 
                 if (response.ok) {
                     const successMessage = language === 'English'
@@ -88,7 +87,7 @@ const FloatingChatbot = () => {
                 addMessage(errorMessage, 'bot');
             }
 
-            setStep(6); // After inquiry submission, finish the conversation
+            setStep(6);
         } else {
             const invalidPhoneMessage = language === 'English'
                 ? 'Please enter a valid 10-digit phone number. 😊'
@@ -99,23 +98,21 @@ const FloatingChatbot = () => {
 
     const handleBack = () => {
         if (step === 2) {
-            setStep(1); // Go back to language selection
+            setStep(1);
             addMessage(previousMessage, 'bot');
         } else if (step === 3 || step === 4) {
-            setStep(2); // Go back to property selection
+            setStep(2);
             addMessage(previousMessage, 'bot');
         } else if (step === 5) {
-            setStep(property === 'Flat' ? 3 : 4); // Go back to options selection
+            setStep(property === 'Flat' ? 3 : 4);
             addMessage(previousMessage, 'bot');
         }
     };
 
     return (
         <div className="fixed bottom-5 right-5 z-50">
-            {/* Chatbot Panel */}
             {isOpen && (
                 <div className="w-full sm:w-80 md:w-96 lg:w-96 xl:w-96 bg-white shadow-xl rounded-lg p-4 border border-gray-200 max-w-xs sm:max-w-md md:max-w-lg">
-                    {/* Chatbot Header */}
                     <div className="flex items-center justify-between border-b pb-2 mb-3">
                         <div className="flex items-center space-x-2">
                             {step > 1 && (
@@ -126,7 +123,7 @@ const FloatingChatbot = () => {
                                     <FiArrowLeft size={20} />
                                 </button>
                             )}
-                            <h3 className="text-lg font-semibold text-gray-700">Hariom Pg AI Assistant 🤖</h3>
+                            <h3 className="text-lg font-semibold text-gray-700">Flatly AI Assistant 🤖</h3>
                         </div>
                         <button
                             onClick={toggleChatbot}
@@ -136,7 +133,6 @@ const FloatingChatbot = () => {
                         </button>
                     </div>
 
-                    {/* Initial Question - Language Selection */}
                     {step === 1 && (
                         <div className="w-full bg-gray-100 p-3 rounded-lg shadow-inner mb-3">
                             <div className="text-gray-700 font-semibold mb-3">
@@ -159,7 +155,6 @@ const FloatingChatbot = () => {
                         </div>
                     )}
 
-                    {/* Chat Area */}
                     {step > 1 && (
                         <div className="h-64 overflow-y-auto bg-gray-50 p-3 rounded-lg shadow-inner mb-3">
                             {messages.map((msg, index) => (
@@ -174,9 +169,7 @@ const FloatingChatbot = () => {
                         </div>
                     )}
 
-                    {/* Input Area */}
                     <div className="flex mt-3 space-y-2">
-                        {/* Property Selection */}
                         {step === 2 && (
                             <div className="grid grid-cols-2 gap-2 w-full">
                                 <button
@@ -194,7 +187,6 @@ const FloatingChatbot = () => {
                             </div>
                         )}
 
-                        {/* Flat Options */}
                         {step === 3 && property === 'Flat' && (
                             <div className="grid grid-cols-2 gap-2 w-full">
                                 {['1 BHK', '2 BHK', '3 BHK', '4 BHK'].map((option) => (
@@ -209,7 +201,6 @@ const FloatingChatbot = () => {
                             </div>
                         )}
 
-                        {/* PG Options */}
                         {step === 4 && property === 'PG' && (
                             <div className="grid grid-cols-2 gap-2 w-full">
                                 {['Single', 'Double', 'Triple', 'Four'].map((option) => (
@@ -224,7 +215,6 @@ const FloatingChatbot = () => {
                             </div>
                         )}
 
-                        {/* Phone Number Input */}
                         {step === 5 && (
                             <div className="flex items-center space-x-2 w-full">
                                 <input
@@ -247,7 +237,6 @@ const FloatingChatbot = () => {
                 </div>
             )}
 
-            {/* Floating Chatbot Icon */}
             {!isOpen && (
                 <div className="bg-blue-500 text-white p-3 rounded-full shadow-lg cursor-pointer" onClick={toggleChatbot}>
                     <BsChatDotsFill size={24} />
