@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Flatly from './components/About';
 import Facilities from './components/Facilities';
 import Footer from './components/Footer';
 import ContactPage from './components/ContactPage';
