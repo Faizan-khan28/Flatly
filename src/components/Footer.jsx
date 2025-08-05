@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'; // Import social icons
-import logo from '/assets/images/logo.png'; // Import your logo image
+import logo from '/assets/images/resident.png'; // Import your logo image
 
 const Footer = () => {
   return (
@@ -64,7 +64,7 @@ const Footer = () => {
             <Link to="#" className="text-gray-400 hover:text-green-400 transition-colors">
               <FaFacebookF />
             </Link>
-            <Link to="https://www.instagram.com/hariompgandflats/" className="text-gray-400 hover:text-green-400 transition-colors">
+            <Link to="#" className="text-gray-400 hover:text-green-400 transition-colors">
               <FaInstagram />
             </Link>
             <Link to="#" className="text-gray-400 hover:text-green-400 transition-colors">

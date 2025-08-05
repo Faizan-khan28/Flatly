@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FiMenu, FiX, FiHome, FiInfo, FiPhone, FiBriefcase, FiUser } from 'react-icons/fi';
-import logo from '/assets/images/logo.png';
+import logo from '/assets/images/resident.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
