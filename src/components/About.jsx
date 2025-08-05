@@ -32,10 +32,10 @@ const AboutFlatly = () => {
               Welcome to Flatly
             </h1>
             <p className="text-gray-300 text-base sm:text-lg md:text-xl font-light font-sans animate-fade-in">
-              Discover a peaceful and cozy place where comfort meets convenience. Hariom PG offers fully furnished rooms and modern amenities to make your stay comfortable and stress-free.
+              Discover a peaceful and cozy place where comfort meets convenience. Flatly offers fully furnished rooms and modern amenities to make your stay comfortable and stress-free.
             </p>
             <p className="mt-4 text-gray-300 text-base sm:text-lg md:text-xl font-light font-sans animate-fade-in">
-              Enjoy a friendly atmosphere and top-notch services in the heart of the city. Whether you are here to work or study, Hariom PG is your ideal home away from home.
+              Enjoy a friendly atmosphere and top-notch services in the heart of the city. Whether you are here to work or study, Flatly is your ideal home away from home.
             </p>
             <button
               className="mt-6 px-6 py-3 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-700 hover:shadow-xl transition-transform transform hover:scale-105 duration-300"

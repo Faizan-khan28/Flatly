@@ -9,7 +9,7 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="relative w-full h-screen bg-cover bg-center flex items-center justify-center bg-hero-pattern">
         <div className="text-center text-white space-y-4 animate-fade-in-up">
-          <h1 className="text-6xl font-bold">Welcome to HariomPG</h1>
+          <h1 className="text-6xl font-bold">Welcome to Flatly</h1>
           <p className="text-xl font-light max-w-2xl mx-auto">
             Your home away from home, where comfort meets affordability.
           </p>
@@ -21,7 +21,7 @@ const AboutPage = () => {
       <section className="container mx-auto px-6 py-20 text-center">
         <h2 className="text-5xl font-semibold mb-10 text-indigo-700 animate-fade-in-up">About Us</h2>
         <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-12 animate-fade-in-up delay-150">
-          At HariomPG, we strive to create a comfortable and welcoming environment for students and professionals alike.
+          At Flatly, we strive to create a comfortable and welcoming environment for students and professionals alike.
           Located in the heart of the city, we offer easy access to essential services and public transportation.
           Our goal is to make your stay as pleasant and worry-free as possible, with high-quality facilities and excellent customer service.
         </p>
@@ -65,7 +65,7 @@ const AboutPage = () => {
             {/* Testimonial 1 */}
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105">
               <p className="text-gray-600 mb-4">
-                “HariomPG is the best place I've stayed! The staff are friendly, the rooms are clean, and the food is amazing.”
+                “Flatly is the best place I've stayed! The staff are friendly, the rooms are clean, and the food is amazing.”
               </p>
               <h3 className="text-xl font-semibold">— Aakash Verma</h3>
             </div>
@@ -97,10 +97,10 @@ const AboutPage = () => {
           <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105">
             <img
               className="w-32 h-32 rounded-full mb-4 shadow-lg transform hover:scale-105 transition duration-300"
-              src={ownerImage}
-              alt="Hari Singh"
+              // src={ownerImage}
+              alt="Faizan"
             />
-            <h3 className="text-xl font-medium">Hari Singh</h3>
+            <h3 className="text-xl font-medium">Faizan</h3>
             <p className="text-gray-600">Owner</p>
           </div>
 
@@ -108,10 +108,10 @@ const AboutPage = () => {
           <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105">
             <img
               className="w-32 h-32 rounded-full mb-4 shadow-lg transform hover:scale-105 transition duration-300"
-              src={managerImage}
-              alt="Prakash"
+              // src={managerImage}
+              alt="sazzu"
             />
-            <h3 className="text-xl font-medium">Prakash</h3>
+            <h3 className="text-xl font-medium">Sazzu</h3>
             <p className="text-gray-600">Manager</p>
           </div>
 
@@ -119,10 +119,10 @@ const AboutPage = () => {
           <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105">
             <img
               className="w-32 h-32 rounded-full mb-4 shadow-lg transform hover:scale-105 transition duration-300"
-              src={developerImage}
-              alt="Harsh Agnihotri"
+              // src={developerImage}
+              alt="Faizan"
             />
-            <h3 className="text-xl font-medium">Harsh Agnihotri</h3>
+            <h3 className="text-xl font-medium">Faizan</h3>
             <p className="text-gray-600">Developer</p>
           </div>
         </div>

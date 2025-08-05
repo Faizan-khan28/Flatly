@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="space-y-4">
           <img src={logo} alt="Hariom PG Logo" className="h-20 w-auto" />
           <p className="text-gray-300 text-sm leading-relaxed">
-            Experience premium living with Hariom PG. We provide comfortable accommodations with modern facilities in the best locations.
+            Experience premium living with Flatly. We provide comfortable accommodations with modern facilities in the best locations.
           </p>
         </div>
 
@@ -44,16 +44,16 @@ const Footer = () => {
         <div className="space-y-4">
           <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
           <p className="text-gray-300 text-base">
-            <strong>Phone:</strong> +91 93108 21158
+            <strong>Phone:</strong> +91 7906264376
           </p>
           <p className="text-gray-300 text-base">
             <strong>Email:</strong>
             <span className="block truncate text-ellipsis max-w-xs sm:max-w-full break-words">
-              hariompganddguesthouse@gmail.com
+              faizankhan786@gmail.com
             </span>
           </p>
           <p className="text-gray-300 text-base">
-            <strong>Address:</strong> Hariom PG, Sector 141, Shahdara, Gali Number 35
+            <strong>Address:</strong> Flatly, India 
           </p>
         </div>
 
@@ -78,7 +78,7 @@ const Footer = () => {
       <div className="relative z-10 border-t border-gray-700 mt-12 pt-6">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between">
           <p className="text-gray-500 text-sm text-center sm:text-left">
-            &copy; 2024 Hariom PG. All rights reserved.
+            &copy; 2024 Flatly. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <Link to="/Privacy" className="text-gray-400 hover:text-green-400 transition-colors">Privacy Policy</Link>

@@ -4,14 +4,14 @@ const ServicesPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return (
+  return ( 
     <div className="bg-gray-50 min-h-screen flex flex-col ">
       {/* Hero Section */}
       <section className="relative w-full h-96 bg-cover bg-center flex items-center justify-center bg-services-hero">
         <div className="text-center text-white space-y-4 animate-fade-in-up">
           <h1 className="text-5xl font-bold">Our Services</h1>
           <p className="text-lg font-light max-w-2xl mx-auto">
-            Discover the range of services we offer to ensure a comfortable and convenient stay at HariomPG.
+            Discover the range of services we offer to ensure a comfortable and convenient stay at Flatly.
           </p>
         </div>
         <div className="absolute inset-0 bg-black opacity-40"></div>
@@ -111,7 +111,7 @@ const ServicesPage = () => {
 
       {/* Footer */}
       {/* <footer className="bg-indigo-600 text-white py-6 text-center">
-        <p>&copy; 2024 HariomPG. All rights reserved.</p>
+        <p>&copy; 2024 Flatly. All rights reserved.</p>
       </footer> */}
     </div>
   );

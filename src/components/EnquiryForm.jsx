@@ -147,7 +147,7 @@ const EnquiryForm = () => {
     <div className="bg-gray-50 min-h-screen mt-12">
       <header className="bg-indigo-600 text-white py-8">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-bold">Enquire Now at HariomSpaces</h1>
+          <h1 className="text-4xl font-bold">Enquire Now at FlatlySpaces</h1>
           <p className="text-lg mt-2">Fill out the form below to get started!</p>
         </div>
       </header>

@@ -5,10 +5,10 @@ const LearnMore = () => {
     <div className="min-h-screen bg-white-100 py-12 px-6 lg:px-8 mt-10">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-extrabold text-gray-800 mb-6 text-center">
-          Learn More About Hariom PG
+          Learn More About Flatly
         </h1>
         <p className="text-lg text-gray-600 leading-relaxed mb-8 text-center">
-          Hariom PG offers a safe, comfortable, and homely environment for students and working professionals. We provide high-quality accommodations with various facilities to make your stay as convenient as possible.
+          Flatly offers a safe, comfortable, and homely environment for students and working professionals. We provide high-quality accommodations with various facilities to make your stay as convenient as possible.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -27,7 +27,7 @@ const LearnMore = () => {
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Facilities</h2>
             <p className="text-gray-600 mb-4">
-              Hariom PG offers clean rooms, a common dining area, study rooms, gym facilities, and a friendly community of residents.
+              Flatly offers clean rooms, a common dining area, study rooms, gym facilities, and a friendly community of residents.
             </p>
             <a href="/facilities" className="text-blue-600 hover:underline">
               Learn About Our Facilities &rarr;
@@ -38,7 +38,7 @@ const LearnMore = () => {
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Prime Location</h2>
             <p className="text-gray-600 mb-4">
-              Located near major educational institutions and business hubs, Hariom PG offers easy access to all necessities like shopping, dining, and commuting.
+              Located near major educational institutions and business hubs, Flatly offers easy access to all necessities like shopping, dining, and commuting.
             </p>
             <a href="/contact" className="text-blue-600 hover:underline">
               Find Us on the Map &rarr;
@@ -50,7 +50,7 @@ const LearnMore = () => {
         <div className="bg-white p-6 mt-12 rounded-lg shadow-lg">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Testimonials</h2>
           <p className="text-gray-600 text-center">
-            "Living at Hariom PG was a fantastic experience. The rooms are clean, and the staff is friendly. I never felt away from home!"
+            "Living at Flatly was a fantastic experience. The rooms are clean, and the staff is friendly. I never felt away from home!"
           </p>
           <p className="text-gray-600 text-center mt-2">- A Happy Resident</p>
         </div>
